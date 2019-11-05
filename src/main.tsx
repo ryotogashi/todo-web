@@ -1,10 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-const App = () => (
-  <>
-    <h1>Hello React</h1>
-  </>
-);
+import App from "./components/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
