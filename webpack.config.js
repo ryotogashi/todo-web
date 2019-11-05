@@ -21,5 +21,8 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [new HtmlWebPackPlugin({ template: "./public/index.html" })]
 };
