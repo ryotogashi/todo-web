@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/main.tsx",
@@ -21,5 +22,14 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
-  plugins: [new HtmlWebPackPlugin({ template: "./public/index.html" })]
+  devServer: {
+    historyApiFallback: true
+  },
+  node: {
+    fs: "empty"
+  },
+  plugins: [
+    new HtmlWebPackPlugin({ template: "./public/index.html" }),
+    new Dotenv()
+  ]
 };
