@@ -13,11 +13,11 @@ const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <div>
+        <React.Fragment>
           <SignInRoute exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-        </div>
+        </React.Fragment>
       </Router>
     </AuthProvider>
   );
