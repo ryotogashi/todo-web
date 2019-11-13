@@ -1,6 +1,8 @@
 import * as React from "react";
 import app from "../../firebase";
 
+import "./AuthenticationFrame.css";
+
 const SignUp = ({ history }) => {
   const handleSignUp = React.useCallback(
     async event => {
@@ -19,17 +21,11 @@ const SignUp = ({ history }) => {
   );
 
   return (
-    <div>
+    <div className="authentication-frame">
       <h1>Sign up</h1>
       <form onSubmit={handleSignUp}>
-        <label>
-          Email
-          <input name="email" type="email" placeholder="Email" />
-        </label>
-        <label>
-          Password
-          <input name="password" type="password" placeholder="Password" />
-        </label>
+        <input name="email" type="email" placeholder="Email" />
+        <input name="password" type="password" placeholder="Password" />
         <button type="submit">Sign Up</button>
       </form>
     </div>
